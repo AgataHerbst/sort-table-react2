@@ -1,15 +1,21 @@
 .td {
-    border: 1px solid #51c71a;
+    border: 1px solid #20B2AA;
     text-align: left;
     padding: 8px;
     font-size: 17px;
-    background-color: rgb(235, 253, 205);
+    background-color: #E0FFFF;
   }
   .edit{
-    background-color: rgb(250, 203, 117);
-    border: 2px solid #51c71a;
+    background-color:#DB7093;
+    border: 2px solid #20B2AA;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
   }
   .delete{
-    background-color: rgb(250, 203, 117);
-    border: 2px solid #51c71a;
+    background-color: #DB7093;
+    border: 2px solid #20B2AA;
+    color: white;
+  font-size: medium;
+  font-weight: bolder;
   }
