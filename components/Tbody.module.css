@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+  .h2{
+    color:  #e26715;;
+  }
+ 
+.th {
+    border: 1px solid #e28915;
+    text-align: left;
+    padding: 8px;
+    font-size: 17px;
+    background-color: rgb(250, 203, 117);
+  }
+  .form {
+  display: flex;
+  gap: 5px;
+ }
+  .add{
+    background-color: rgb(250, 203, 117);
+    border: 2px solid #51c71a;
+  }
+  .input {
+    background-color: rgb(235, 253, 205);
+    border: 2px solid #51c71a;
+  }

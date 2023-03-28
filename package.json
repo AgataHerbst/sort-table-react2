@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/AgataHerbst/sort-table-react2/issues"
   },
-  "homepage": "https://github.com/AgataHerbst/sort-table-react2#readme"
+  "homepage": "https://github.com/AgataHerbst/sort-table-react2#readme",
+  "dependencies": {
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
