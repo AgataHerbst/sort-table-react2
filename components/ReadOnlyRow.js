@@ -1,5 +1,8 @@
-import s from './ReadOnlyRoad.module.css';
-function ReadOnlyRow ({user, handleEditClick, handleDeleteClick }) {
+import s from './ReadOnlyRow.module.css';
+
+
+function ReadOnlyRow ({user, handleEditClick, handleDeleteClick, ListUser }) {
+
     return<>
     <tr className={s.td} >
    <td>{user.name}</td>
@@ -12,7 +15,9 @@ function ReadOnlyRow ({user, handleEditClick, handleDeleteClick }) {
     <button className={s.edit} type='button' onClick={(event) => handleEditClick(event, user)}>Edit</button>
     <button className={s.delete} type='button' onClick={()=>handleDeleteClick(user.id)}>Delete</button>
    </td>
-   </tr>
+   <td><button>Details</button></td>
+  
+  </tr>
     </>
 }
 export default ReadOnlyRow;

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 import ReadOnlyRow from '../components/ReadOnlyRow';
 import EditableRow from '../components/EditableRow';
+import ListUser from '../components/ListUser';
 
 function Tbody() {
   const [users, setUsers] = useState([]);
@@ -97,7 +98,7 @@ function Tbody() {
             <th className={s.th}>Phone</th>
             <th className={s.th}>Company.Name</th>
             <th className={s.th}>Actions</th>
-          </tr>
+           </tr>
         </thead>
         <tbody className={s.tbody}>
 
@@ -115,7 +116,7 @@ function Tbody() {
                 user={user}
                 handleEditClick={handleEditClick}
                 handleDeleteClick={handleDeleteClick}
-              />
+               />
           })}
 
           <tr><td colSpan={8}><h2 className={s.h2}>Add a New Contact</h2>
@@ -123,6 +124,8 @@ function Tbody() {
 
         </tbody>
       </table>
+      <ListUser users={[...users]} />
+
       <form onSubmit={handleAddFormSubmit}>
         <input className={s.input}
           type="text"
@@ -168,8 +171,7 @@ function Tbody() {
         />
         <button className={s.add} type="submit">Add</button>
       </form>
-
-    </div>
+</div>
   </>
 
 }
