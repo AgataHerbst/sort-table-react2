@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 import ReadOnlyRow from '../components/ReadOnlyRow';
 import EditableRow from '../components/EditableRow';
-import ListUser from '../components/ListUser';
+
 
 function Tbody() {
   const [users, setUsers] = useState([]);
@@ -99,6 +99,7 @@ function Tbody() {
             <th className={s.th}>Phone</th>
             <th className={s.th}>Company.Name</th>
             <th className={s.th}>Actions</th>
+            <th className={s.th}>Details</th>
            </tr>
         </thead>
         <tbody className={s.tbody}>
