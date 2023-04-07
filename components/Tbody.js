@@ -83,10 +83,11 @@ function Tbody() {
     }, [])
 
   } catch (err) {
-    console.log('Поймали ошибку.')
+    console.log('Поймали ошибку.', err);
   }
 
   return <>
+         
     <div className={s.container}>
       <table className={s.table}>
         <thead className={s.thead}>
@@ -101,7 +102,7 @@ function Tbody() {
            </tr>
         </thead>
         <tbody className={s.tbody}>
-
+      
           {users.map((user) => {
             return editContactId === user.id
               ? <EditableRow
@@ -124,8 +125,11 @@ function Tbody() {
 
         </tbody>
       </table>
-      <ListUser users={[...users]} />
-
+     
+      <ListUser 
+       key={users.id}
+      users={[...users]} />
+    
       <form onSubmit={handleAddFormSubmit}>
         <input className={s.input}
           type="text"

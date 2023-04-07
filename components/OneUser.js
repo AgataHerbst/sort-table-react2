@@ -1,14 +1,17 @@
-
+ import OnePost from '../components/OnePost';
+ import {useState} from 'react';
 export default function OneUser({
     user: {
         id, name, username, email,
         address: {addressCity },
         phone, website,
         company: {
-          name: companyName,
+        name: companyName,
          
         }
       } }) {
+
+        const [flag, setFlag]=  useState(true);
 
       return (
         <>
@@ -20,6 +23,8 @@ export default function OneUser({
         <span>{addressCity}</span>
         <span><b>{companyName}</b></span>
       </fieldset>
+
+      {flag ? <button onClick={_=>setFlag(false) }>Show posts</button> : <OnePost id={id}/>}
           
         </>
       )

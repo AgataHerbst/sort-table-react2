@@ -6,12 +6,16 @@ function ListUser({ users: propsUsers }) {
   const [detailsId, setDetailsId] = useState([]);
   
 return <>
-      <tr>
-    <tbody>
+<div>
+  <tbody>
+   <tr>
+    <td>
     { propsUsers.map((user,key) =><OneUser user={user} key={key}/>)}
     { detailsId.map(id => <Fetch id={id} key={id} />)}
-    </tbody>
+    </td>
   </tr>
+  </tbody>
+  </div>
   </>
  };
 
