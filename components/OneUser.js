@@ -1,5 +1,7 @@
  import OnePost from '../components/OnePost';
  import {useState} from 'react';
+ import Fetch from '../components/Fetch';
+
 export default function OneUser({
     user: {
         id, name, username, email,
@@ -18,13 +20,13 @@ export default function OneUser({
         <fieldset>
         <legend>#{id} {username}</legend>
         <h3>{name}</h3>
-        <span> 📧<a href={`mailto:${email}`}>{email}</a>📞<a href={`tel:${phone}`}>{phone}</a></span>
-        <span>🌐<a href={`http://${website}`}>{website}</a></span>
-        <span>{addressCity}</span>
-        <span><b>{companyName}</b></span>
+        <td> 📧<a href={`mailto:${email}`}>{email}</a>📞<a href={`tel:${phone}`}>{phone}</a></td>
+        <td>🌐<a href={`http://${website}`}>{website}</a></td>
+        <td>{addressCity}</td>
+        <td><b>{companyName}</b></td>
       </fieldset>
 
-      {flag ? <button onClick={_=>setFlag(false) }>Show posts</button> : <OnePost id={id}/>}
+      {flag ? <button onClick={_=>setFlag(false) }>Show posts</button> : <Fetch id={id}/>}
           
         </>
       )

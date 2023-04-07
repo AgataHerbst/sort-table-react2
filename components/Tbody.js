@@ -126,9 +126,7 @@ function Tbody() {
         </tbody>
       </table>
      
-      <ListUser 
-       key={users.id}
-      users={[...users]} />
+     
     
       <form onSubmit={handleAddFormSubmit}>
         <input className={s.input}

@@ -1,9 +1,10 @@
 import s from './ReadOnlyRow.module.css';
+import {useState} from 'react';
+import OneUser from '../components/OneUser';
 
+function ReadOnlyRow ({user, handleEditClick, handleDeleteClick}) {
 
-
-function ReadOnlyRow ({user, handleEditClick, handleDeleteClick, propsUser}) {
-
+  const [showUser, setShowUser] = useState([]);
     return<>
     <tr className={s.td}>
    <td>{user.name}</td>
@@ -16,7 +17,8 @@ function ReadOnlyRow ({user, handleEditClick, handleDeleteClick, propsUser}) {
     <button className={s.edit} type='button' onClick={(event) => handleEditClick(event, user)}>Edit</button>
     <button className={s.delete} type='button' onClick={()=>handleDeleteClick(user.id)}>Delete</button>
    </td>
-     <td><button onclick={_=>propsUser(user.id)}>Details</button></td>
+    
+     {showUser ? <button onClick={_=>setShowUser(false) }>Details</button> : <OneUser user={user}/>}
      </tr>
     
     </>
